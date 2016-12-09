@@ -1,0 +1,12 @@
+#!/usr/local/bin/python
+# -*- coding: utf-8 -*-
+def file2Set(path = '/Users/xuwuqiang/Downloads/1.log'):
+    file = open(path) 
+    fileSet = []
+    for line in file.readlines():
+        if line == '\n':
+            continue
+        fileSet.append(line.strip())
+    file.close()
+    setFile = set(fileSet)
+    return setFile
